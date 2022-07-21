@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ /**
+  * Copyright © Magento, Inc. All rights reserved.
+  * See COPYING.txt for license details.
+  */
+-->
+
+<tests xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="urn:magento:mftf:Test/etc/testSchema.xsd">
+    <test name="AdminOutOfStockThresholdAppliedToSimpleInAdvancedInventoryOnProductPageTest">
+        <annotations>
+            <stories value="Out-of-Stock Threshold"/>
+            <title value="Out-of-Stock Threshold applied to Simple product on Product page in admin"/>
+            <description value="Out-of-Stock Threshold applied to Simple product on Product page in admin."/>
+            <testCaseId value="https://app.hiptest.com/projects/69435/test-plan/folders/909051/scenarios/1652166"/>
+            <severity value="CRITICAL"/>
+            <group value="msi"/>
+            <group value="multi_mode"/>
+        </annotations>
+
+        <before>
+            <createData entity="_minimalSource" stepKey="customSource"/>
+            <createData entity="BasicMsiStockWithMainWebsite1" stepKey="CustomStockMainWebsite"/>
+            <createData entity="SourceStockLinked1" stepKey="stockSourceLink">
+                <requiredEntity createDataKey="CustomStockMainWebsite"/>
+                <requiredEntity createDataKey="customSource"/>
+            </createData>
+            <createData entity="SimpleSubCategory" stepKey="category"/>
+            <actionGroup ref="AdminLoginActionGroup" stepKey="loginAsAdmin"/>
+            <createData entity="SimpleProduct" stepKey="simpleProduct">
+                <requiredEntity createDataKey="category"/>
+            </createData>
+            <amOnPage url="{{AdminProductEditPage.url($$simpleProduct.id$$)}}" stepKey="openProductEditPageToAssignSource"/>
+            <actionGroup ref="AssignSourceToProductActionGroup" stepKey="assignSourceToCreatedProduct">
+                <argument name="sourceCode" value="$$customSource.source[source_code]$$"/>
+            </actionGroup>
+            <fillField selector="{{AdminProductSourcesGrid.rowQty('1')}}" userInput="100" stepKey="setCustomSourceQuantity"/>
+            <actionGroup ref="UnassignSourceFromProductActionGroup" stepKey="unassignSource">
+                <argument name="sourceCode" value="{{_defaultSource.name}}"/>
+            </actionGroup>
+            <actionGroup ref="AdminChangeOutOfStockThresholdOnProductEditPageActionGroup" stepKey="setOutOfStockThreshold">
+                <argument name="threshold" value="100"/>
+            </actionGroup>
+            <actionGroup ref="AdminFormSaveAndCloseActionGroup" stepKey="saveEditedSimpleProduct"/>
+        </before>
+
+        <after>
+            <deleteData createDataKey="category" stepKey="deleteCategory"/>
+            <deleteData createDataKey="simpleProduct" stepKey="deleteProduct"/>
+            <actionGroup ref="AssignWebsiteToStockActionGroup" stepKey="assignMainWebsiteToDefaultStock">
+                <argument name="stockName" value="{{_defaultStock.name}}"/>
+                <argument name="websiteName" value="{{_defaultWebsite.name}}"/>
+            </actionGroup>
+            <actionGroup ref="DisableSourceActionGroup" stepKey="disableCreatedCustomSource1">
+                <argument name="sourceCode" value="$$customSource.source[source_code]$$"/>
+            </actionGroup>
+            <deleteData createDataKey="CustomStockMainWebsite" stepKey="deleteStock"/>
+            <magentoCLI command="indexer:reindex" stepKey="runIndexerReindex" />
+            <magentoCLI command="cache:flush" stepKey="cleanCache"/>
+            <actionGroup ref="AdminLogoutActionGroup" stepKey="logoutOfAdmin"/>
+        </after>
+
+        <!-- Go to storefront category page, assert product isn't visible. -->
+        <waitForPageLoad time="30" stepKey="waitForPageLoadToNotSeeTheProduct1"/>
+        <amOnPage url="{{StorefrontCategoryPage.url($$category.custom_attributes[url_key]$$)}}" stepKey="navigateToCategoryPageOnStorefrontToNotSeeTheProduct"/>
+        <dontSee userInput="$$simpleProduct.product[name]$$" stepKey="assertProductNotPresentOnCategoryPageOnStorefront"/>
+        <dontSee userInput="$$simpleProduct.product[price]$$" stepKey="assertProductPriceNotPresentOnCategoryPageOnStorefront"/>
+
+        <!--Change value 'Out of Stock Threshold' for simple product.-->
+        <amOnPage url="{{AdminProductEditPage.url($$simpleProduct.id$$)}}" stepKey="openProductEditPage"/>
+        <actionGroup ref="AdminChangeOutOfStockThresholdOnProductEditPageActionGroup" stepKey="setOutOfStockThreshold">
+            <argument name="threshold" value="99"/>
+        </actionGroup>
+        <click selector="{{AdminProductFormActionSection.saveButton}}" stepKey="saveProduct"/>
+
+        <!-- Go to storefront category page, assert product visibility. -->
+        <reloadPage stepKey="reloadPage1"/>
+        <amOnPage url="{{StorefrontCategoryPage.url($$category.custom_attributes[url_key]$$)}}" stepKey="navigateToCategoryPageOnStorefront"/>
+        <waitForPageLoad time="30" stepKey="waitForCategoryPageLoadOnStorefront"/>
+        <see userInput="$$simpleProduct.product[name]$$" stepKey="assertProductPresentOnCategoryPageOnStorefront"/>
+        <see userInput="$$simpleProduct.product[price]$$" stepKey="assertProductPricePresentOnCategoryPageOnStorefront"/>
+    </test>
+</tests>

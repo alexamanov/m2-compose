@@ -1,0 +1,2 @@
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1654463719;s:6:"expire";i:9999999999;s:4:"tags";s:23:"8f0_REFLECTION,8f0_MAGE";}
+{"createEmptyCart":{"type":"string","isRequired":true,"description":"Cart ID.","parameterCount":0},"assignCustomer":{"type":"boolean","isRequired":true,"description":null,"parameterCount":3},"placeOrder":{"type":"int","isRequired":true,"description":"Order ID.","parameterCount":1}}

@@ -1,0 +1,85 @@
+version: '3'
+services:
+  mysql:
+    container_name: mysql
+    hostname: mysql
+    image: mysql:8.0.27
+    ports:
+      - 3306:3306/tcp
+    networks:
+      - inner
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+        MYSQL_DATABASE: m2
+        MYSQL_PASSWORD: docker
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_USER: docker
+  phpmyadmin:
+    container_name: phpmyadmin
+    hostname: phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    networks:
+      - inner
+    environment:
+      - PMA_HOST=mysql
+      - PMA_PORT=3306
+      - PMA_USER=docker
+      - PMA_PASSWORD=docker
+    ports:
+      - 8085:80
+    depends_on:
+      - mysql
+  nginx:
+    container_name: nginx
+    hostname: nginx
+    image: nginx:1.17.8
+    ports:
+      - "80:80"
+    volumes:
+      - ./ce244:/var/www/html
+      - ./docker/nginx/site.conf:/etc/nginx/conf.d/site.conf
+    links:
+      - php
+    networks:
+      - inner
+  php:
+    container_name: php
+    hostname: php
+    build:
+      context: docker/php-fpm
+    volumes:
+      - ./ce244:/var/www/html
+      - ./docker/php-fpm/php.ini:/usr/local/etc/php/php.ini
+    working_dir: /var/www/html
+    environment:
+      XDEBUG_CONFIG: "remote_host=192.168.220.1 mode=debug start_with_request=yes idekey=PHPSTORM"
+      PHP_IDE_CONFIG: "serverName=PhpServerBase"
+    networks:
+      - inner
+  mailhog:
+    container_name: mailhog
+    hostname: mailhog
+    image: mailhog/mailhog
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+    networks:
+      - inner
+  es79:
+    container_name: es79
+    image: elasticsearch:7.9.3
+    ports:
+      - 9279:9200/tcp
+    networks:
+      - inner
+    environment:
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g
+networks:
+  inner:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.220.0/24

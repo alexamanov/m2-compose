@@ -1,0 +1,2 @@
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1654464193;s:6:"expire";i:9999999999;s:4:"tags";s:19:"8f0_CONFIG,8f0_MAGE";}
+{"stemmerInfo":{"type":"stemmer","default":"english","de_DE":"german","en_US":"english","es_ES":"spanish","fr_FR":"french","nl_NL":"dutch","pt_BR":"portuguese"},"stopwordsInfo":{"default":"stopwords.csv","de_DE":"stopwords_de_DE.csv","en_US":"stopwords_en_US.csv","es_ES":"stopwords_es_ES.csv","fr_FR":"stopwords_fr_FR.csv","nl_NL":"stopwords_nl_NL.csv","pt_BR":"stopwords_pt_BR.csv"}}

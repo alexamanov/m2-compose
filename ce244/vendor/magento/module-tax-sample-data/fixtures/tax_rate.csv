@@ -1,0 +1,2 @@
+code,tax_country_id,tax_region_name,tax_postcode,rate
+US-MI-*-Rate 1,US,Michigan,*,8.25

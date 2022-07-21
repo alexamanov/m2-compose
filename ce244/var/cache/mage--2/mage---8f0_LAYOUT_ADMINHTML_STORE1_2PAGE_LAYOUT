@@ -1,0 +1,223 @@
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1657832844;s:6:"expire";i:1689368844;s:4:"tags";s:37:"8f0_LAYOUT_GENERAL_CACHE_TAG,8f0_MAGE";}
+<?xml version="1.0"?>
+<layouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><layout id="admin-1column"><container name="root">
+   <container name="backend.page">
+      <container name="after.body.start" as="after.body.start" label="Page Top" before="-"/>
+      <container name="page.wrapper" as="page_wrapper" htmlTag="div" htmlClass="page-wrapper">
+         <container name="notices.wrapper" before="-" htmlClass="notices-wrapper" htmlTag="div">
+            <container name="notifications" as="notifications"/>
+            <container name="notification.window" as="notification_window" before="-"/>
+            <container name="global.notices" as="global_notices" after="notification.window"/>
+         </container>
+         <container name="header" htmlTag="header" htmlClass="page-header"/>
+         <container name="page.menu" as="page.menu" after="header"/>
+         <container name="page.breadcrumbs" as="page.breadcrumbs"/>
+         <container name="page.formkey" as="page.formkey"/>
+         <container name="page.content" as="page_content" htmlTag="main" htmlId="anchor-content" htmlClass="page-content">
+            <container name="main.top" as="main-top" label="main-top"/>
+            <container name="page.main.actions" as="page_main_actions" htmlTag="div" htmlClass="page-main-actions"/>
+            <container name="messages.wrapper" as="messages.wrapper" htmlTag="div" htmlId="messages">
+               <container name="page.messages" as="page.messages"/>
+            </container>
+            <container name="page.main.container" as="page_main_container" htmlId="page:main-container" htmlTag="div" htmlClass="page-columns">
+               <container name="admin.scope.col.wrap" as="admin-scope-col-wrap" htmlTag="div" htmlClass="admin__old">
+                  <container name="main.col" as="main-col" htmlId="container" htmlTag="div" htmlClass="main-col">
+                     <container name="content" as="content"/>
+                  </container>
+               </container>
+            </container>
+         </container>
+         <container name="js" as="js" label="JavaScript"/>
+         <container htmlTag="footer" htmlClass="page-footer">
+            <container name="footer" htmlTag="div" htmlClass="page-footer-content row"/>
+         </container>
+      </container>
+      <container name="before.body.end" as="before_body_end" label="Before Body End" after="-"/>
+   </container>
+</container>
+</layout><layout id="admin-2columns-left"><container name="root">
+   <container name="backend.page">
+      <container name="after.body.start" as="after.body.start" label="Page Top" before="-"/>
+      <container name="page.wrapper" as="page_wrapper" htmlTag="div" htmlClass="page-wrapper">
+         <container name="notices.wrapper" before="-" htmlClass="notices-wrapper" htmlTag="div">
+            <container name="notifications" as="notifications"/>
+            <container name="notification.window" as="notification_window" before="-"/>
+            <container name="global.notices" as="global_notices" after="notification.window"/>
+         </container>
+         <container name="header" htmlTag="header" htmlClass="page-header"/>
+         <container name="page.menu" as="page.menu" after="header"/>
+         <container name="page.breadcrumbs" as="page.breadcrumbs"/>
+         <container name="page.formkey" as="page.formkey"/>
+         <container name="page.content" as="page_content" htmlTag="main" htmlId="anchor-content" htmlClass="page-content">
+            <container name="main.top" as="main-top" label="main-top"/>
+            <container name="page.main.actions" as="page_main_actions" htmlTag="div" htmlClass="page-main-actions"/>
+            <container name="messages.wrapper" as="messages.wrapper" htmlTag="div" htmlId="messages">
+               <container name="page.messages" as="page.messages"/>
+            </container>
+            <container name="page.main.container" as="page_main_container" htmlId="page:main-container" htmlTag="div" htmlClass="page-columns">
+               <container name="main.col" as="main-col" htmlId="container" htmlTag="div" htmlClass="main-col">
+                  <container name="admin.scope.col.wrap" as="admin-scope-col-wrap" htmlTag="div" htmlClass="admin__scope-old">
+                     <container name="content" as="content"/>
+                  </container>
+               </container>
+               <container name="side.col" as="side-col" after="main.col" htmlId="page:left" htmlTag="div" htmlClass="side-col">
+                  <container name="left" as="left"/>
+               </container>
+            </container>
+         </container>
+         <container name="js" as="js" label="JavaScript"/>
+         <container htmlTag="footer" htmlClass="page-footer">
+            <container name="footer" htmlTag="div" htmlClass="page-footer-content row"/>
+         </container>
+      </container>
+      <container name="before.body.end" as="before_body_end" label="Before Body End" after="-"/>
+   </container>
+</container>
+</layout><layout id="admin-empty"><container name="root">
+   <container name="page.formkey" as="page.formkey"/>
+   <container name="content" as="content"/>
+   <container name="js" as="js" label="JavaScript"/>
+</container>
+</layout><layout id="admin-login"><container name="root" htmlTag="section" htmlClass="page-wrapper">
+   <container name="after.body.start" as="after.body.start" label="Page Top" before="-"/>
+   <container name="login.header" htmlTag="header" htmlClass="login-header"/>
+   <container name="login.content" htmlTag="div" htmlClass="login-content"/>
+   <container name="login.footer" htmlTag="footer" htmlClass="login-footer"/>
+</container>
+</layout><layout id="empty"><container name="root">
+   <container name="after.body.start" as="after.body.start" before="-" label="Page Top"/>
+   <container name="page.wrapper" as="page_wrapper" htmlTag="div" htmlClass="page-wrapper">
+      <container name="global.notices" as="global_notices" before="-"/>
+      <container name="main.content" htmlTag="main" htmlId="maincontent" htmlClass="page-main">
+         <container name="columns.top" label="Before Main Columns"/>
+         <container name="columns" htmlTag="div" htmlClass="columns">
+            <container name="main" label="Main Content Container" htmlTag="div" htmlClass="column main"/>
+         </container>
+      </container>
+      <container name="page.bottom.container" as="page_bottom_container" label="Before Page Footer Container" after="main.content" htmlTag="div" htmlClass="page-bottom"/>
+      <container name="before.body.end" as="before_body_end" after="-" label="Page Bottom"/>
+   </container>
+</container>
+</layout><layout id="admin-popup"><container name="backend.session.activity">
+   <container name="after.body.start" as="after.body.start" label="Page Top" before="-"/>
+   <container name="page.wrapper" as="page_wrapper" htmlTag="div" htmlClass="page-wrapper">
+      <container name="page.main.container" as="page_main_container" htmlId="page:main-container" htmlTag="div" htmlClass="page-columns">
+         <container name="main.col" as="main-col" htmlId="container" htmlTag="div" htmlClass="main-col">
+            <container name="content" as="content"/>
+         </container>
+      </container>
+      <container name="js" as="js" label="JavaScript"/>
+   </container>
+   <container name="before.body.end" as="before_body_end" label="Before Body End" after="-"/>
+</container>
+</layout><layout id="admin-1column"><container name="root">
+   <container name="backend.page">
+      <container name="after.body.start" as="after.body.start" label="Page Top" before="-"/>
+      <container name="page.wrapper" as="page_wrapper" htmlTag="div" htmlClass="page-wrapper">
+         <container name="notices.wrapper" before="-" htmlClass="notices-wrapper" htmlTag="div">
+            <container name="notifications" as="notifications"/>
+            <container name="notification.window" as="notification_window" before="-"/>
+            <container name="global.notices" as="global_notices" after="notification.window"/>
+         </container>
+         <container name="header" htmlTag="header" htmlClass="page-header"/>
+         <container name="page.menu" as="page.menu" after="header"/>
+         <container name="page.breadcrumbs" as="page.breadcrumbs"/>
+         <container name="page.formkey" as="page.formkey"/>
+         <container name="page.content" as="page_content" htmlTag="main" htmlId="anchor-content" htmlClass="page-content">
+            <container name="main.top" as="main-top" label="main-top"/>
+            <container name="page.main.actions" as="page_main_actions" htmlTag="div" htmlClass="page-main-actions"/>
+            <container name="messages.wrapper" as="messages.wrapper" htmlTag="div" htmlId="messages">
+               <container name="page.messages" as="page.messages"/>
+            </container>
+            <container name="page.main.container" as="page_main_container" htmlId="page:main-container" htmlTag="div" htmlClass="page-columns">
+               <container name="admin.scope.col.wrap" as="admin-scope-col-wrap" htmlTag="div" htmlClass="admin__old">
+                  <container name="main.col" as="main-col" htmlId="container" htmlTag="div" htmlClass="main-col">
+                     <container name="content" as="content"/>
+                  </container>
+               </container>
+            </container>
+         </container>
+         <container name="js" as="js" label="JavaScript"/>
+         <container htmlTag="footer" htmlClass="page-footer">
+            <container name="footer" htmlTag="div" htmlClass="page-footer-content row"/>
+         </container>
+      </container>
+      <container name="before.body.end" as="before_body_end" label="Before Body End" after="-"/>
+   </container>
+</container>
+</layout><layout id="admin-2columns-left"><container name="root">
+   <container name="backend.page">
+      <container name="after.body.start" as="after.body.start" label="Page Top" before="-"/>
+      <container name="page.wrapper" as="page_wrapper" htmlTag="div" htmlClass="page-wrapper">
+         <container name="notices.wrapper" before="-" htmlClass="notices-wrapper" htmlTag="div">
+            <container name="notifications" as="notifications"/>
+            <container name="notification.window" as="notification_window" before="-"/>
+            <container name="global.notices" as="global_notices" after="notification.window"/>
+         </container>
+         <container name="header" htmlTag="header" htmlClass="page-header"/>
+         <container name="page.menu" as="page.menu" after="header"/>
+         <container name="page.breadcrumbs" as="page.breadcrumbs"/>
+         <container name="page.formkey" as="page.formkey"/>
+         <container name="page.content" as="page_content" htmlTag="main" htmlId="anchor-content" htmlClass="page-content">
+            <container name="main.top" as="main-top" label="main-top"/>
+            <container name="page.main.actions" as="page_main_actions" htmlTag="div" htmlClass="page-main-actions"/>
+            <container name="messages.wrapper" as="messages.wrapper" htmlTag="div" htmlId="messages">
+               <container name="page.messages" as="page.messages"/>
+            </container>
+            <container name="page.main.container" as="page_main_container" htmlId="page:main-container" htmlTag="div" htmlClass="page-columns">
+               <container name="main.col" as="main-col" htmlId="container" htmlTag="div" htmlClass="main-col">
+                  <container name="admin.scope.col.wrap" as="admin-scope-col-wrap" htmlTag="div" htmlClass="admin__scope-old">
+                     <container name="content" as="content"/>
+                  </container>
+               </container>
+               <container name="side.col" as="side-col" after="main.col" htmlId="page:left" htmlTag="div" htmlClass="side-col">
+                  <container name="left" as="left"/>
+               </container>
+            </container>
+         </container>
+         <container name="js" as="js" label="JavaScript"/>
+         <container htmlTag="footer" htmlClass="page-footer">
+            <container name="footer" htmlTag="div" htmlClass="page-footer-content row"/>
+         </container>
+      </container>
+      <container name="before.body.end" as="before_body_end" label="Before Body End" after="-"/>
+   </container>
+</container>
+</layout><layout id="admin-empty"><container name="root">
+   <container name="page.formkey" as="page.formkey"/>
+   <container name="content" as="content"/>
+   <container name="js" as="js" label="JavaScript"/>
+</container>
+</layout><layout id="admin-login"><container name="root" htmlTag="section" htmlClass="page-wrapper">
+   <container name="after.body.start" as="after.body.start" label="Page Top" before="-"/>
+   <container name="login.header" htmlTag="header" htmlClass="login-header"/>
+   <container name="login.content" htmlTag="div" htmlClass="login-content"/>
+   <container name="login.footer" htmlTag="footer" htmlClass="login-footer"/>
+</container>
+</layout><layout id="empty"><container name="root">
+   <container name="after.body.start" as="after.body.start" before="-" label="Page Top"/>
+   <container name="page.wrapper" as="page_wrapper" htmlTag="div" htmlClass="page-wrapper">
+      <container name="global.notices" as="global_notices" before="-"/>
+      <container name="main.content" htmlTag="main" htmlId="maincontent" htmlClass="page-main">
+         <container name="columns.top" label="Before Main Columns"/>
+         <container name="columns" htmlTag="div" htmlClass="columns">
+            <container name="main" label="Main Content Container" htmlTag="div" htmlClass="column main"/>
+         </container>
+      </container>
+      <container name="page.bottom.container" as="page_bottom_container" label="Before Page Footer Container" after="main.content" htmlTag="div" htmlClass="page-bottom"/>
+      <container name="before.body.end" as="before_body_end" after="-" label="Page Bottom"/>
+   </container>
+</container>
+</layout><layout id="admin-popup"><container name="backend.session.activity">
+   <container name="after.body.start" as="after.body.start" label="Page Top" before="-"/>
+   <container name="page.wrapper" as="page_wrapper" htmlTag="div" htmlClass="page-wrapper">
+      <container name="page.main.container" as="page_main_container" htmlId="page:main-container" htmlTag="div" htmlClass="page-columns">
+         <container name="main.col" as="main-col" htmlId="container" htmlTag="div" htmlClass="main-col">
+            <container name="content" as="content"/>
+         </container>
+      </container>
+      <container name="js" as="js" label="JavaScript"/>
+   </container>
+   <container name="before.body.end" as="before_body_end" label="Before Body End" after="-"/>
+</container>
+</layout></layouts>

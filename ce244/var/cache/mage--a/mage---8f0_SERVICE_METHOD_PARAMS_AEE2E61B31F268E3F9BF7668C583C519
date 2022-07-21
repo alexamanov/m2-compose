@@ -1,0 +1,2 @@
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1654463718;s:6:"expire";i:9999999999;s:4:"tags";s:38:"8f0_REFLECTION,8f0_REFLECTION,8f0_MAGE";}
+[{"name":"prices","type":"\\Magento\\Catalog\\Api\\Data\\CostInterface[]","isDefaultValueAvailable":false,"defaultValue":null}]

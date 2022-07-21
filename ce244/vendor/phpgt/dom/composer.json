@@ -1,0 +1,80 @@
+{
+	"name": "phpgt/dom",
+	"description": "The modern DOM API for PHP projects.",
+	"type": "library",
+
+	"require": {
+		"php": ">=7.3",
+		"ext-dom": "*",
+		"ext-libxml": "*",
+		"ext-mbstring": "*",
+		"phpgt/cssxpath": "^1.1.4",
+		"psr/http-message": "1.*"
+	},
+
+	"require-dev": {
+		"phpunit/phpunit": "~9.5"
+	},
+
+	"license": "MIT",
+
+	"authors": [
+		{
+			"name": "Greg Bowler",
+			"homepage": "https://www.g105b.com",
+			"email": "greg.bowler@g105b.com",
+			"role": "Developer"
+		},
+		{
+			"name": "Alvaro Guimaraes",
+			"homepage": "https://github.com/aguimaraes",
+			"role": "Developer"
+		},
+		{
+			"name": "James Fellows",
+			"homepage": "https://github.com/j4m3s",
+			"role": "Developer"
+		},
+		{
+			"name": "Emile Ward",
+			"homepage": "https://github.com/emileward",
+			"role": "Developer"
+		},
+		{
+			"name": "Jelmer Wijnja",
+			"homepage": "https://github.com/Jelmergu",
+			"role": "Developer"
+		},
+		{
+			"name": "Ognjen Petrovic",
+			"homepage": "https://github.com/ognjen-petrovic",
+			"role": "Developer"
+		},
+		{
+			"name": "Jacob Bearden",
+			"homepage": "https://github.com/jacobbearden",
+			"role": "Documentation contributor"
+		},
+		{
+			"name": "Jaroslav Týc",
+			"homepage": "https://www.jaroslavtyc.com/",
+			"role": "Developer"
+		},
+		{
+			"name": "Andrii Beziazychnyi",
+			"homepage": "https://www.atwix.com/",
+			"role": "Developer"
+		}
+	],
+
+	"autoload": {
+		"psr-4": {
+		      "Gt\\Dom\\": "./src"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+		      "Gt\\Dom\\Test\\": "./test/phpunit"
+		}
+	}
+}

@@ -1,0 +1,1 @@
+/usr/local/apache2/htdocs/vendor/magento/module-captcha/view/frontend/web/js/model/captcha.js

@@ -1,0 +1,25 @@
+{
+    "name": "temando/module-shipping-remover",
+    "description": "Removes Temando multi-carrier shipping extension from Magento 2",
+    "version": "1.0.0",
+    "replace": {
+        "temando/module-shipping-m2": "*"
+    },
+    "type": "magento2-module",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "require": {
+        "magento/framework": "*",
+        "magento/module-eav": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Temando\\ShippingRemover\\": ""
+        }
+    }
+}
