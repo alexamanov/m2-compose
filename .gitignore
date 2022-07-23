@@ -1,5 +1,8 @@
 .idea
 mysql/*
+ce244/pub/static/*
 ce244/generated/*
 ce244/var/cache/*
+ce244/var/page_cache/*
 ce244/var/log/*
+ce244/var/view_preprocessed/*

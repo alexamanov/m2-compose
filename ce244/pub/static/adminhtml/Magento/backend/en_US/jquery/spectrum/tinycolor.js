@@ -1,1 +1,0 @@
-/usr/local/apache2/htdocs/lib/web/jquery/spectrum/tinycolor.js

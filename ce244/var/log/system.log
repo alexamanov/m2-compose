@@ -1859,3 +1859,200 @@ Did you mean one of these?
 #3 /var/www/html/vendor/symfony/console/Application.php(149): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 #4 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
 #5 {main} [] []
+[2022-07-23T11:26:22.309795+00:00] main.ERROR: Missing following extensions: 'soap' 'bcmath' 'gd' 'xsl' 'zip' 'sockets'
+#0 [internal function]: Magento\Setup\Model\Installer->checkExtensions()
+#1 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(385): call_user_func_array(Array, Array)
+#2 /var/www/html/setup/src/Magento/Setup/Console/Command/InstallCommand.php(238): Magento\Setup\Model\Installer->install(Array)
+#3 /var/www/html/vendor/symfony/console/Command/Command.php(255): Magento\Setup\Console\Command\InstallCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /var/www/html/vendor/symfony/console/Application.php(1009): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 /var/www/html/vendor/symfony/console/Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /var/www/html/vendor/magento/framework/Console/Cli.php(115): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /var/www/html/vendor/symfony/console/Application.php(149): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#9 {main} [] []
+[2022-07-23T12:00:32.428947+00:00] main.ERROR: Sample Data error: Warning: file_get_contents(/var/www/html/pub/media/downloadable/files/links/l/u/luma_background_-_model_against_fence_4_sec_.mp4): Failed to open stream: No such file or directory in /var/www/html/vendor/magento/module-downloadable-sample-data/Model/Product/Converter.php on line 132 [] []
+[2022-07-23T12:13:44.316172+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T12:13:44.804675+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T12:13:45.446525+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T12:13:53.737609+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T12:13:54.225414+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T12:13:54.991781+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T12:16:11.371879+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 3334; Allocated memory size: 40008000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T12:16:34.859144+00:00] main.ERROR: Connection "default" is not defined
+#0 /var/www/html/generated/code/Magento/Framework/App/ResourceConnection/Interceptor.php(41): Magento\Framework\App\ResourceConnection->getConnectionByName('default')
+#1 /var/www/html/vendor/magento/framework/App/ResourceConnection.php(97): Magento\Framework\App\ResourceConnection\Interceptor->getConnectionByName('default')
+#2 /var/www/html/generated/code/Magento/Framework/App/ResourceConnection/Interceptor.php(23): Magento\Framework\App\ResourceConnection->getConnection('default')
+#3 /var/www/html/vendor/magento/framework/Model/ResourceModel/Db/AbstractDb.php(312): Magento\Framework\App\ResourceConnection\Interceptor->getConnection('default')
+#4 /var/www/html/vendor/magento/module-message-queue/Model/ResourceModel/Lock.php(103): Magento\Framework\Model\ResourceModel\Db\AbstractDb->getConnection()
+#5 /var/www/html/vendor/magento/module-message-queue/Model/Plugin/ResourceModel/Lock.php(39): Magento\MessageQueue\Model\ResourceModel\Lock->releaseOutdatedLocks()
+#6 /var/www/html/vendor/magento/framework/Interception/Interceptor.php(146): Magento\MessageQueue\Model\Plugin\ResourceModel\Lock->afterSet(Object(Magento\Framework\App\MaintenanceMode\Interceptor), true, 0)
+#7 /var/www/html/vendor/magento/framework/Interception/Interceptor.php(153): Magento\Framework\App\MaintenanceMode\Interceptor->Magento\Framework\Interception\{closure}(0)
+#8 /var/www/html/generated/code/Magento/Framework/App/MaintenanceMode/Interceptor.php(32): Magento\Framework\App\MaintenanceMode\Interceptor->___callPlugins('set', Array, Array)
+#9 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(1467): Magento\Framework\App\MaintenanceMode\Interceptor->set(0)
+#10 [internal function]: Magento\Setup\Model\Installer->setMaintenanceMode(0)
+#11 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(385): call_user_func_array(Array, Array)
+#12 /var/www/html/setup/src/Magento/Setup/Console/Command/InstallCommand.php(238): Magento\Setup\Model\Installer->install(Array)
+#13 /var/www/html/vendor/symfony/console/Command/Command.php(255): Magento\Setup\Console\Command\InstallCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /var/www/html/vendor/symfony/console/Application.php(1009): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/www/html/vendor/symfony/console/Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /var/www/html/vendor/magento/framework/Console/Cli.php(115): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/html/vendor/symfony/console/Application.php(149): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#19 {main} [] []
+[2022-07-23T12:48:38.667828+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T13:55:41.232626+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T13:58:11.539975+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T14:01:26.655519+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T14:03:14.317146+00:00] main.ERROR: The default website isn't defined. Set the website and try again. [] []
+[2022-07-23T14:03:14.421046+00:00] main.CRITICAL: DomainException: The default website isn't defined. Set the website and try again. in /var/www/html/vendor/magento/module-store/Model/WebsiteRepository.php:159
+Stack trace:
+#0 /var/www/html/vendor/magento/module-store/Model/StoreResolver/Website.php(49): Magento\Store\Model\WebsiteRepository->getDefault()
+#1 /var/www/html/vendor/magento/module-store/Model/StoresData.php(67): Magento\Store\Model\StoreResolver\Website->getAllowedStoreIds(NULL)
+#2 /var/www/html/vendor/magento/module-store/Model/StoreResolver.php(138): Magento\Store\Model\StoresData->getStoresData('website', NULL)
+#3 /var/www/html/vendor/magento/module-store/Model/StoreResolver.php(97): Magento\Store\Model\StoreResolver->getStoresData()
+#4 /var/www/html/vendor/magento/module-store/Model/StoreManager.php(160): Magento\Store\Model\StoreResolver->getCurrentStoreId()
+#5 /var/www/html/generated/code/Magento/Store/Model/StoreManagerInterface/Proxy.php(119): Magento\Store\Model\StoreManager->getStore(NULL)
+#6 /var/www/html/vendor/magento/module-store/Model/Resolver/Store.php(30): Magento\Store\Model\StoreManagerInterface\Proxy->getStore(NULL)
+#7 /var/www/html/vendor/magento/framework/App/Config/ScopeCodeResolver.php(49): Magento\Store\Model\Resolver\Store->getScope(NULL)
+#8 /var/www/html/vendor/magento/framework/App/Config.php(69): Magento\Framework\App\Config\ScopeCodeResolver->resolve('stores', NULL)
+#9 /var/www/html/vendor/magento/module-backend/App/Area/FrontNameResolver.php(123): Magento\Framework\App\Config->getValue('admin/url/use_c...', 'stores')
+#10 /var/www/html/vendor/magento/module-backend/App/Area/FrontNameResolver.php(106): Magento\Backend\App\Area\FrontNameResolver->isHostBackend()
+#11 /var/www/html/vendor/magento/framework/App/AreaList.php(73): Magento\Backend\App\Area\FrontNameResolver->getFrontName(true)
+#12 /var/www/html/vendor/magento/framework/App/Http.php(111): Magento\Framework\App\AreaList->getCodeByFrontName('')
+#13 /var/www/html/generated/code/Magento/Framework/App/Http/Interceptor.php(23): Magento\Framework\App\Http->launch()
+#14 /var/www/html/vendor/magento/framework/App/Bootstrap.php(264): Magento\Framework\App\Http\Interceptor->launch()
+#15 /var/www/html/index.php(39): Magento\Framework\App\Bootstrap->run(Object(Magento\Framework\App\Http\Interceptor))
+#16 {main} {"report_id":"ee006da6835a8169467d5f73d88aa314b4d0e900207653147985c3ae36cd69d8"} []
+[2022-07-23T14:05:35.402583+00:00] main.ERROR: The "--db-protocol" option does not exist.
+#0 /var/www/html/vendor/symfony/console/Input/ArgvInput.php(143): Symfony\Component\Console\Input\ArgvInput->addLongOption('db-protocol', 'tcp')
+#1 /var/www/html/vendor/symfony/console/Input/ArgvInput.php(79): Symfony\Component\Console\Input\ArgvInput->parseLongOption('--db-protocol=t...')
+#2 /var/www/html/vendor/symfony/console/Input/Input.php(55): Symfony\Component\Console\Input\ArgvInput->parse()
+#3 /var/www/html/vendor/symfony/console/Command/Command.php(214): Symfony\Component\Console\Input\Input->bind(Object(Symfony\Component\Console\Input\InputDefinition))
+#4 /var/www/html/vendor/symfony/console/Application.php(1009): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 /var/www/html/vendor/symfony/console/Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /var/www/html/vendor/magento/framework/Console/Cli.php(115): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /var/www/html/vendor/symfony/console/Application.php(149): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#9 {main} [] []
+[2022-07-23T14:06:16.330628+00:00] main.ERROR: Parameter validation failed
+#0 /var/www/html/vendor/symfony/console/Command/Command.php(221): Magento\Setup\Console\Command\InstallCommand->initialize(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#1 /var/www/html/vendor/symfony/console/Application.php(1009): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /var/www/html/vendor/symfony/console/Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /var/www/html/vendor/magento/framework/Console/Cli.php(115): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /var/www/html/vendor/symfony/console/Application.php(149): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#6 {main} [] []
+[2022-07-23T14:21:58.230738+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T14:22:00.603303+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T14:22:01.372976+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T14:22:21.279452+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T14:22:22.163989+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T14:22:22.672114+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T14:29:53.192132+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 3334; Allocated memory size: 40008000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T14:31:10.779886+00:00] main.ERROR: Connection "default" is not defined
+#0 /var/www/html/generated/code/Magento/Framework/App/ResourceConnection/Interceptor.php(41): Magento\Framework\App\ResourceConnection->getConnectionByName('default')
+#1 /var/www/html/vendor/magento/framework/App/ResourceConnection.php(97): Magento\Framework\App\ResourceConnection\Interceptor->getConnectionByName('default')
+#2 /var/www/html/generated/code/Magento/Framework/App/ResourceConnection/Interceptor.php(23): Magento\Framework\App\ResourceConnection->getConnection('default')
+#3 /var/www/html/vendor/magento/framework/Model/ResourceModel/Db/AbstractDb.php(312): Magento\Framework\App\ResourceConnection\Interceptor->getConnection('default')
+#4 /var/www/html/vendor/magento/module-message-queue/Model/ResourceModel/Lock.php(103): Magento\Framework\Model\ResourceModel\Db\AbstractDb->getConnection()
+#5 /var/www/html/vendor/magento/module-message-queue/Model/Plugin/ResourceModel/Lock.php(39): Magento\MessageQueue\Model\ResourceModel\Lock->releaseOutdatedLocks()
+#6 /var/www/html/vendor/magento/framework/Interception/Interceptor.php(146): Magento\MessageQueue\Model\Plugin\ResourceModel\Lock->afterSet(Object(Magento\Framework\App\MaintenanceMode\Interceptor), true, 0)
+#7 /var/www/html/vendor/magento/framework/Interception/Interceptor.php(153): Magento\Framework\App\MaintenanceMode\Interceptor->Magento\Framework\Interception\{closure}(0)
+#8 /var/www/html/generated/code/Magento/Framework/App/MaintenanceMode/Interceptor.php(32): Magento\Framework\App\MaintenanceMode\Interceptor->___callPlugins('set', Array, Array)
+#9 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(1467): Magento\Framework\App\MaintenanceMode\Interceptor->set(0)
+#10 [internal function]: Magento\Setup\Model\Installer->setMaintenanceMode(0)
+#11 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(385): call_user_func_array(Array, Array)
+#12 /var/www/html/setup/src/Magento/Setup/Console/Command/InstallCommand.php(238): Magento\Setup\Model\Installer->install(Array)
+#13 /var/www/html/vendor/symfony/console/Command/Command.php(255): Magento\Setup\Console\Command\InstallCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /var/www/html/vendor/symfony/console/Application.php(1009): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/www/html/vendor/symfony/console/Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /var/www/html/vendor/magento/framework/Console/Cli.php(115): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/html/vendor/symfony/console/Application.php(149): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#19 {main} [] []
+[2022-07-23T14:45:35.790013+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T14:45:37.095986+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T14:45:37.702760+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T14:45:52.654203+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T14:45:53.453104+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T14:45:54.021236+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T14:48:49.877914+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 3334; Allocated memory size: 40008000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T14:54:06.027348+00:00] main.ERROR: There are no commands defined in the "de:mo" namespace.
+#0 /var/www/html/vendor/symfony/console/Application.php(657): Symfony\Component\Console\Application->findNamespace('de:mo')
+#1 /var/www/html/vendor/symfony/console/Application.php(237): Symfony\Component\Console\Application->find('de:mo:sh')
+#2 /var/www/html/vendor/magento/framework/Console/Cli.php(115): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /var/www/html/vendor/symfony/console/Application.php(149): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#5 {main} [] []
+[2022-07-23T14:55:01.942436+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T14:58:57.455280+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T15:00:53.746784+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T15:00:58.315534+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T15:01:56.423234+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T16:40:25.740889+00:00] main.ERROR: Sample Data error: Warning: file_get_contents(/var/www/html/pub/media/downloadable/files/links/l/u/luma_background_-_model_against_fence_4_sec_.mp4): Failed to open stream: No such file or directory in /var/www/html/vendor/magento/module-downloadable-sample-data/Model/Product/Converter.php on line 132 [] []
+[2022-07-23T16:52:55.847075+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T16:52:56.379902+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T16:52:57.094167+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T16:53:08.553352+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T16:53:09.111647+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T16:53:09.902619+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T16:55:13.106011+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 3334; Allocated memory size: 40008000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T16:55:41.997943+00:00] main.ERROR: Connection "default" is not defined
+#0 /var/www/html/generated/code/Magento/Framework/App/ResourceConnection/Interceptor.php(41): Magento\Framework\App\ResourceConnection->getConnectionByName('default')
+#1 /var/www/html/vendor/magento/framework/App/ResourceConnection.php(97): Magento\Framework\App\ResourceConnection\Interceptor->getConnectionByName('default')
+#2 /var/www/html/generated/code/Magento/Framework/App/ResourceConnection/Interceptor.php(23): Magento\Framework\App\ResourceConnection->getConnection('default')
+#3 /var/www/html/vendor/magento/framework/Model/ResourceModel/Db/AbstractDb.php(312): Magento\Framework\App\ResourceConnection\Interceptor->getConnection('default')
+#4 /var/www/html/vendor/magento/module-message-queue/Model/ResourceModel/Lock.php(103): Magento\Framework\Model\ResourceModel\Db\AbstractDb->getConnection()
+#5 /var/www/html/vendor/magento/module-message-queue/Model/Plugin/ResourceModel/Lock.php(39): Magento\MessageQueue\Model\ResourceModel\Lock->releaseOutdatedLocks()
+#6 /var/www/html/vendor/magento/framework/Interception/Interceptor.php(146): Magento\MessageQueue\Model\Plugin\ResourceModel\Lock->afterSet(Object(Magento\Framework\App\MaintenanceMode\Interceptor), true, 0)
+#7 /var/www/html/vendor/magento/framework/Interception/Interceptor.php(153): Magento\Framework\App\MaintenanceMode\Interceptor->Magento\Framework\Interception\{closure}(0)
+#8 /var/www/html/generated/code/Magento/Framework/App/MaintenanceMode/Interceptor.php(32): Magento\Framework\App\MaintenanceMode\Interceptor->___callPlugins('set', Array, Array)
+#9 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(1467): Magento\Framework\App\MaintenanceMode\Interceptor->set(0)
+#10 [internal function]: Magento\Setup\Model\Installer->setMaintenanceMode(0)
+#11 /var/www/html/setup/src/Magento/Setup/Model/Installer.php(385): call_user_func_array(Array, Array)
+#12 /var/www/html/setup/src/Magento/Setup/Console/Command/InstallCommand.php(238): Magento\Setup\Model\Installer->install(Array)
+#13 /var/www/html/vendor/symfony/console/Command/Command.php(255): Magento\Setup\Console\Command\InstallCommand->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /var/www/html/vendor/symfony/console/Application.php(1009): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /var/www/html/vendor/symfony/console/Application.php(273): Symfony\Component\Console\Application->doRunCommand(Object(Magento\Setup\Console\Command\InstallCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /var/www/html/vendor/magento/framework/Console/Cli.php(115): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /var/www/html/vendor/symfony/console/Application.php(149): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#19 {main} [] []
+[2022-07-23T18:19:22.138235+00:00] main.ERROR: Sample Data error: Warning: file_get_contents(/var/www/html/pub/media/downloadable/files/links/l/u/luma_background_-_model_against_fence_4_sec_.mp4): Failed to open stream: No such file or directory in /var/www/html/vendor/magento/module-downloadable-sample-data/Model/Product/Converter.php on line 132 [] []
+[2022-07-23T18:40:35.669660+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T18:40:36.788102+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T18:40:37.474943+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T18:40:52.800711+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T18:40:53.534625+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T18:40:54.332290+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 100000; Allocated memory size: 50000000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T18:44:54.908944+00:00] main.WARNING: Memory size allocated for the temporary table is more than 20% of innodb_buffer_pool_size. Please update innodb_buffer_pool_size or decrease batch size value (which decreases memory usages for the temporary table). Current batch size: 3334; Allocated memory size: 40008000 bytes; InnoDB buffer pool size: 134217728 bytes. [] []
+[2022-07-23T18:53:40.986259+00:00] main.INFO: Broken reference: the 'catalog.compare.sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:53:40.986330+00:00] main.INFO: Broken reference: the 'catalog.compare.sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:53:41.302515+00:00] main.INFO: Broken reference: the 'sale.reorder.sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:53:41.302476+00:00] main.INFO: Broken reference: the 'sale.reorder.sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:53:41.305510+00:00] main.INFO: Broken reference: the 'wishlist_sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:53:41.305833+00:00] main.INFO: Broken reference: the 'wishlist_sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:53:41.306869+00:00] main.INFO: Broken reference: the 'paypal.partner.right.logo' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:53:41.307416+00:00] main.INFO: Broken reference: the 'paypal.partner.right.logo' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:53:41.307583+00:00] main.INFO: Broken reference: the 'bml.right.logo' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:53:41.308118+00:00] main.INFO: Broken reference: the 'bml.right.logo' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:53:41.308333+00:00] main.INFO: Broken reference: the 'sidebar.container.paylater' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:53:41.308889+00:00] main.INFO: Broken reference: the 'sidebar.container.paylater' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:56:23.952604+00:00] main.INFO: Broken reference: the 'catalog.compare.sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:56:23.952593+00:00] main.INFO: Broken reference: the 'catalog.compare.sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:56:24.383378+00:00] main.INFO: Broken reference: the 'sale.reorder.sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:56:24.383629+00:00] main.INFO: Broken reference: the 'sale.reorder.sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:56:24.385386+00:00] main.INFO: Broken reference: the 'wishlist_sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:56:24.385596+00:00] main.INFO: Broken reference: the 'wishlist_sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:56:24.386267+00:00] main.INFO: Broken reference: the 'paypal.partner.right.logo' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:56:24.386468+00:00] main.INFO: Broken reference: the 'paypal.partner.right.logo' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:56:24.386775+00:00] main.INFO: Broken reference: the 'bml.right.logo' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:56:24.387011+00:00] main.INFO: Broken reference: the 'bml.right.logo' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:56:24.387259+00:00] main.INFO: Broken reference: the 'sidebar.container.paylater' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T18:56:24.387515+00:00] main.INFO: Broken reference: the 'sidebar.container.paylater' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T19:09:08.709203+00:00] main.INFO: Broken reference: the 'catalog.compare.sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T19:09:11.651626+00:00] main.INFO: Broken reference: the 'sale.reorder.sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T19:09:11.654191+00:00] main.INFO: Broken reference: the 'wishlist_sidebar' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T19:09:11.655285+00:00] main.INFO: Broken reference: the 'paypal.partner.right.logo' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T19:09:11.655931+00:00] main.INFO: Broken reference: the 'bml.right.logo' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []
+[2022-07-23T19:09:11.656603+00:00] main.INFO: Broken reference: the 'sidebar.container.paylater' element cannot be added as child to 'sidebar.additional', because the latter doesn't exist [] []

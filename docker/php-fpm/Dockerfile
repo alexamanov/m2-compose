@@ -36,6 +36,12 @@ RUN apt-get update && apt-get install -y wget git unzip \
 #Install php ext
 RUN docker-php-ext-install \
 pdo_mysql \
+soap \
+bcmath \
+gd \
+xsl \
+zip \
+sockets \
 intl
 
 #Configure permissions
