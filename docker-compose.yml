@@ -4,6 +4,7 @@ services:
     container_name: mysql
     hostname: mysql
     image: mysql:8.0.27
+    restart: always
     ports:
       - 3306:3306/tcp
     networks:
