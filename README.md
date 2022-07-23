@@ -11,6 +11,9 @@ docker-compose up --build -d
 ## INSTALL MAGENTO (5-25min)
 docker exec -it php powershell
 <br>
+(For Windows - powershell, for Linux - bash)
+<br>
+<br>
 php bin/magento setup:install \\
 --base-url=http://localhost/ \\
 --db-host=mysql \\
