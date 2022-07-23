@@ -46,7 +46,10 @@ intl
 
 #Configure permissions
 RUN usermod -u 1000 www-data && groupmod -g 1000 www-data && \
-    chsh -s /bin/bash www-data
+	chsh -s /bin/bash www-data
+
+RUN find /var/www/html -type d -exec chmod 755 {} \;
+RUN	find /var/www/html -type f -exec chmod 644 {} \;
 
 RUN usermod -aG sudo www-data
 
