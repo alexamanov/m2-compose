@@ -9,6 +9,7 @@ services:
     networks:
       - inner
     volumes:
+      - ./sql-script:/docker-entrypoint-initdb.d
       - ./mysql:/var/lib/mysql
     environment:
         MYSQL_DATABASE: m2
@@ -27,8 +28,8 @@ services:
       - PMA_USER=docker
       - PMA_PASSWORD=docker
     ports:
-      - 8085:80
-    depends_on:
+      - 8088:80
+    links:
       - mysql
   nginx:
     container_name: nginx
@@ -38,7 +39,7 @@ services:
       - "80:80"
     volumes:
       - ./ce244:/var/www/html
-      - ./docker/nginx/site.conf:/etc/nginx/conf.d/site.conf
+      - ./docker/nginx/site.conf:/etc/nginx/conf.d/default.conf
     links:
       - php
     networks:
@@ -68,6 +69,7 @@ services:
       - inner
   es79:
     container_name: es79
+    hostname: es79
     image: elasticsearch:7.9.3
     ports:
       - 9279:9200/tcp

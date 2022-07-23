@@ -3933,3 +3933,68 @@ Stack trace:
 [2022-07-14T21:17:03.189243+00:00] main.INFO: Broken reference: the 'notification.messages' tries to reorder itself towards 'user', but their parents are different: 'header' and '' respectively. [] []
 [2022-07-14T21:17:03.190055+00:00] main.INFO: Broken reference: the 'header.inner.left' tries to reorder itself towards '', but their parents are different: 'header' and '' respectively. [] []
 [2022-07-14T21:17:03.190683+00:00] main.INFO: Broken reference: the 'header.inner.right' tries to reorder itself towards 'header.inner.left', but their parents are different: 'header' and '' respectively. [] []
+[2022-07-22T20:49:27.256061+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-22T20:50:17.661809+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-22T20:52:37.177142+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-22T20:53:03.957190+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-22T20:56:47.540521+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-22T21:44:08.921246+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-22T21:44:08.921243+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-22T21:44:36.563659+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-22T21:44:58.523980+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-22T21:45:57.062829+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-22T21:46:20.061890+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-22T23:43:31.525519+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-22T23:43:52.731397+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-22T23:44:10.576480+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-22T23:44:28.527269+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:23:26.565056+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:23:26.565123+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:23:26.565120+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:23:27.870227+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:23:27.870224+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:25:04.199506+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:25:04.220555+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:25:04.227887+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:25:06.116786+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:25:06.121753+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:25:20.236889+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:25:20.499805+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:25:20.600006+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:25:27.291200+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:25:30.152161+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:25:38.514427+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:25:38.533559+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:25:42.098560+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:25:44.148693+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:25:48.457762+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:40:12.595561+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:49:24.991633+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:50:46.744099+00:00] main.ERROR: Error: Application is not installed yet.  [] []
+[2022-07-23T00:51:21.072618+00:00] main.ERROR: There are no commands defined in the "c" namespace.
+
+Did you mean one of these?
+    app:config
+    info:backups
+    info:currency
+    info:dependencies
+    maintenance
+    module:config
+    setup:config
+    setup:db-schema
+    setup:performance
+    setup:static-content
+    setup:store-config
+#0 /var/www/html/vendor/symfony/console/Application.php(657): Symfony\Component\Console\Application->findNamespace('c')
+#1 /var/www/html/vendor/symfony/console/Application.php(237): Symfony\Component\Console\Application->find('c:f')
+#2 /var/www/html/vendor/magento/framework/Console/Cli.php(115): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /var/www/html/vendor/symfony/console/Application.php(149): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#5 {main} [] []
+[2022-07-23T00:51:45.371286+00:00] main.ERROR: There are no commands defined in the "ca" namespace.
+#0 /var/www/html/vendor/symfony/console/Application.php(657): Symfony\Component\Console\Application->findNamespace('ca')
+#1 /var/www/html/vendor/symfony/console/Application.php(237): Symfony\Component\Console\Application->find('ca:fl')
+#2 /var/www/html/vendor/magento/framework/Console/Cli.php(115): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /var/www/html/vendor/symfony/console/Application.php(149): Magento\Framework\Console\Cli->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /var/www/html/bin/magento(23): Symfony\Component\Console\Application->run()
+#5 {main} [] []
