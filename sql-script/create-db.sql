@@ -1,1 +1,0 @@
-create database m2;
