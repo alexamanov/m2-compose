@@ -6,3 +6,4 @@ ce244/var/page_cache/*
 ce244/var/log/debug.log
 ce244/var/log/system.log
 ce244/var/view_preprocessed/*
+ce244/pub/media/catalog/product/cache/*
