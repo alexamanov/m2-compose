@@ -1,14 +1,14 @@
-# REQUIREMENTS
+## REQUIREMENTS
 docker
 <br>
 docker-compose
 
-# STOP LOCAL SERVERS (XAMP, OPENSERVER, DENWER, APACHE2, NGINX, MYSQL)
+## STOP LOCAL SERVERS (XAMP, OPENSERVER, DENWER, APACHE2, NGINX, MYSQL)
 
-## BUILD AND RUN APP (10-40min)
+### BUILD AND RUN APP (10-40min)
 docker-compose up --build -d
 
-## INSTALL MAGENTO (5-25min)
+### INSTALL MAGENTO (5-25min)
 docker exec -it php powershell
 <br>
 (For Windows - powershell, for Linux - bash)
@@ -33,11 +33,11 @@ php bin/magento setup:install \\
 --elasticsearch-host=es79 \\
 --elasticsearch-port=9200
 
-## FRONT
+### FRONT
 http://localhost/
 ![FRONT](guide/home.png?raw=true "HOME")
 
-## ADMIN
+### ADMIN
 http://localhost/admin
 <br>
 Username: admin
@@ -45,30 +45,30 @@ Username: admin
 Password: a111111
 ![ADMIN](guide/admin.png?raw=true "ADMIN")
 
-## GO TO PHP CONTAINER
+### GO TO PHP CONTAINER
 docker exec -it php powershell
 <br>
 (For Windows - powershell, for Linux - bash)
 
-## PHPMYADMIN
+### PHPMYADMIN
 http://localhost:8088/
 <br>
 docker | docker
 ![PMA](guide/pma.png?raw=true "PMA")
 
-## MAILHOG
+### MAILHOG
 http://localhost:8025/
 
-## PHPSTORM & XDEBUG
+### PHPSTORM & XDEBUG
 Go to File > Settings > PHP > Server
 
-## AFTER INSTALLATION TO RUN USE
+### AFTER INSTALLATION TO RUN USE
 docker-compose up -d
 
-## DOWN APP (!!STOP)
+#### DOWN APP (!!STOP)
 docker-compose down
 
-## !!DON'T USE THIS!! IMPORT DB VIA MYSQL CLI (ADVANCED. 5-10min)
+#### !!DON'T USE THIS!! IMPORT DB VIA MYSQL CLI (ADVANCED. 5-10min)
 mysql -u docker -p m2 --protocol=tcp < dump/m2.sql
 <br>
 Enter password: docker
