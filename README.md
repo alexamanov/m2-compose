@@ -3,15 +3,21 @@ docker-compose https://docs.docker.com/desktop/install/windows-install/
 
 ### STOP LOCAL SERVERS (XAMPP, OPENSERVER, DENWER, APACHE2, NGINX, MYSQL, etc)
 
-### CLONE THIS REPO (OR DOWNLOAD ZIP)
-git clone git@github.com:alexamanov/m2-compose.git
+### CLONE THIS REPO VIA GIT
+https://git-scm.com/download/win
 <br>
+git clone git@github.com:alexamanov/m2-compose.git
+
+### OR DOWNLOAD ZIP
+![ZIP](guide/zip.png?raw=true "ZIP")
+
+### OPEN PROJECT IN CONSOLE (CMD, POWERSHELL, BASH)
 cd m2-compose
 
-### BUILD AND RUN APP (10-30min)
+### BUILD AND RUN APP
 docker-compose up --build -d
 
-### INSTALL MAGENTO (10-30min)
+### INSTALL MAGENTO
 docker exec -it php bash
 <br>
 <br>
@@ -50,6 +56,8 @@ Password: a111111
 
 ### GO TO PHP CONTAINER
 docker exec -it php bash
+<br>
+or via docker desktop
 
 ### PHPMYADMIN
 http://localhost:8088/
@@ -97,8 +105,3 @@ docker-compose up -d
 
 #### DOWN APP (!!STOP)
 docker-compose down
-
-#### !!DON'T USE THIS!! IMPORT DB VIA MYSQL CLI (ADVANCED. 5-10min)
-mysql -u docker -p m2 --protocol=tcp < dump/m2.sql
-<br>
-Enter password: docker
