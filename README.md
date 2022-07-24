@@ -1,9 +1,7 @@
 ### REQUIREMENTS
-docker
-<br>
-docker-compose
+docker-compose https://docs.docker.com/desktop/install/windows-install/
 
-### STOP LOCAL SERVERS (XAMP, OPENSERVER, DENWER, APACHE2, NGINX, MYSQL)
+### STOP LOCAL SERVERS (XAMPP, OPENSERVER, DENWER, APACHE2, NGINX, MYSQL, etc)
 
 ### CLONE THIS REPO (OR DOWNLOAD ZIP)
 git clone git@github.com:alexamanov/m2-compose.git
@@ -14,9 +12,7 @@ cd m2-compose
 docker-compose up --build -d
 
 ### INSTALL MAGENTO (10-30min)
-docker exec -it php powershell
-<br>
-(For Windows - powershell, for Linux - bash)
+docker exec -it php bash
 <br>
 <br>
 php bin/magento setup:install \\
@@ -52,9 +48,7 @@ Password: a111111
 ![ADMIN](guide/admin.png?raw=true "ADMIN")
 
 ### GO TO PHP CONTAINER
-docker exec -it php powershell
-<br>
-(For Windows - powershell, for Linux - bash)
+docker exec -it php bash
 
 ### PHPMYADMIN
 http://localhost:8088/
