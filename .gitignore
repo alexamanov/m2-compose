@@ -1,5 +1,4 @@
 .idea
-mysql/*
 ce244/generated/*
 ce244/var/cache/*
 ce244/var/page_cache/*
