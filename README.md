@@ -36,7 +36,7 @@ php bin/magento setup:install \\
 
 ### FRONT
 http://localhost/
-<br>
+<br><br>
 ![FRONT](guide/home.png?raw=true "HOME")
 
 ### ADMIN
@@ -45,6 +45,7 @@ http://localhost/admin
 Username: admin
 <br>
 Password: a111111
+<br><br>
 ![ADMIN](guide/admin.png?raw=true "ADMIN")
 
 ### GO TO PHP CONTAINER
@@ -54,22 +55,22 @@ docker exec -it php bash
 http://localhost:8088/
 <br>
 docker | docker
+<br><br>
 ![PMA](guide/pma.png?raw=true "PMA")
 
 ### MAILHOG
 http://localhost:8025/
-<br>
+<br><br>
 ![MAIL-1](guide/mail-1.png?raw=true "mail-1")
 ![MAIL-2](guide/mail-2.png?raw=true "mail-2")
 
 ### PHPSTORM & XDEBUG
 Open m2-compose/ce244 directory in PHPSTORM
-<br>
+<br><br>
 Go to File > Settings > PHP > Servers
-<br>
+<br><br>
 ![PHPSTORM-XDEBUG-1](guide/phpstorm-xdebug-1.png?raw=true "PHPSTORM-XDEBUG-1")
-<br>
-<br>
+<br><br>
 Name: PhpServerBase
 <br>
 Host: 127.0.0.1
@@ -77,18 +78,17 @@ Host: 127.0.0.1
 Use path mapping: true
 <br>
 Absolute path on the server: /var/www/html
-<br>
+<br><br>
 ![PHPSTORM-XDEBUG-2](guide/phpstorm-xdebug-2.png?raw=true "PHPSTORM-XDEBUG-2")
-<br>
-<br>
+<br><br>
 Go to File > Settings > PHP
 <br>
 Change CLi Interpreter
+<br>
 ![PHPSTORM-XDEBUG-4](guide/phpstorm-xdebug-4.png?raw=true "PHPSTORM-XDEBUG-4")
 ![PHPSTORM-XDEBUG-5](guide/phpstorm-xdebug-5.png?raw=true "PHPSTORM-XDEBUG-5")
 ![PHPSTORM-XDEBUG-6](guide/phpstorm-xdebug-6.png?raw=true "PHPSTORM-XDEBUG-6")
-<br>
-<br>
+<br><br>
 Result:
 ![PHPSTORM-XDEBUG-3](guide/phpstorm-xdebug-3.png?raw=true "PHPSTORM-XDEBUG-3")
 
