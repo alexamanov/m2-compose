@@ -35,13 +35,11 @@ php bin/magento setup:install \\
 --elasticsearch-port=9200
 
 ### FRONT
-<br>
 http://localhost/
 <br>
 ![FRONT](guide/home.png?raw=true "HOME")
 
 ### ADMIN
-<br>
 http://localhost/admin
 <br>
 Username: admin
@@ -53,7 +51,6 @@ Password: a111111
 docker exec -it php bash
 
 ### PHPMYADMIN
-<br>
 http://localhost:8088/
 <br>
 docker | docker
