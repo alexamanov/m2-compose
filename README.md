@@ -1,9 +1,14 @@
-## REQUIREMENTS
+### REQUIREMENTS
 docker
 <br>
 docker-compose
 
-## STOP LOCAL SERVERS (XAMP, OPENSERVER, DENWER, APACHE2, NGINX, MYSQL)
+### STOP LOCAL SERVERS (XAMP, OPENSERVER, DENWER, APACHE2, NGINX, MYSQL)
+
+### CLONE THIS REPO (OR DOWNLOAD ZIP)
+git clone git@github.com:alexamanov/m2-compose.git
+<br>
+cd m2-compose
 
 ### BUILD AND RUN APP (10-30min)
 docker-compose up --build -d
