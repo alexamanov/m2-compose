@@ -35,11 +35,13 @@ php bin/magento setup:install \\
 --elasticsearch-port=9200
 
 ### FRONT
+<br>
 http://localhost/
 <br>
 ![FRONT](guide/home.png?raw=true "HOME")
 
 ### ADMIN
+<br>
 http://localhost/admin
 <br>
 Username: admin
@@ -51,6 +53,7 @@ Password: a111111
 docker exec -it php bash
 
 ### PHPMYADMIN
+<br>
 http://localhost:8088/
 <br>
 docker | docker
@@ -63,7 +66,10 @@ http://localhost:8025/
 ![MAIL-2](guide/mail-2.png?raw=true "mail-2")
 
 ### PHPSTORM & XDEBUG
+Open m2-compose/ce244 directory in PHPSTORM
+<br>
 Go to File > Settings > PHP > Servers
+<br>
 ![PHPSTORM-XDEBUG-1](guide/phpstorm-xdebug-1.png?raw=true "PHPSTORM-XDEBUG-1")
 <br>
 <br>
