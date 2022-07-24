@@ -4,7 +4,7 @@ services:
     container_name: mysql
     hostname: mysql
     image: mysql:8.0.27
-    restart: always
+    restart: on-failure
     ports:
       - 3306:3306/tcp
     networks:
@@ -12,6 +12,7 @@ services:
     volumes:
       - ./sql-script:/docker-entrypoint-initdb.d
       - ./mysql:/var/lib/mysql
+      - ./dump:/home
     environment:
         MYSQL_DATABASE: m2
         MYSQL_PASSWORD: docker
