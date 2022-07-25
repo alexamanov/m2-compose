@@ -17,12 +17,14 @@ cd m2-compose
 ### BUILD AND RUN APP
 docker-compose up --build -d
 
-### IMPORT DB
+### IMPORT DATABASE
 Go to mysql container:
+<br>
 docker exec -it mysql bash
 <br>
 <br>
 mysql -u docker -p m2;
+<br>
 Enter password: docker
 <br>
 <br>
