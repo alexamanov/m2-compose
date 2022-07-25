@@ -18,7 +18,7 @@ cd m2-compose
 docker-compose up --build -d
 
 ### IMPORT DATABASE
-docker exec -it mysql "mysql -u docker -pdocker m2 < /home/m2.sql"
+docker exec -d mysql "mysql -u docker -pdocker m2 < /home/m2.sql"
 
 ### FRONT
 http://localhost/
