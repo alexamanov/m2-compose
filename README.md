@@ -1,24 +1,33 @@
 ### REQUIREMENTS
-docker-compose https://docs.docker.com/desktop/install/windows-install/
+Docker https://docs.docker.com/desktop/install/windows-install/
+![DOCKER](guide/docker.png?raw=true "DOCKER")
+<br>
+Git https://git-scm.com/download/win
+![GIT](guide/git.png?raw=true "GIT")
 
 ### STOP LOCAL SERVERS (XAMPP, OPENSERVER, DENWER, APACHE2, NGINX, MYSQL, etc)
 
-### CLONE THIS REPO VIA GIT
-https://git-scm.com/download/win
-<br>
+### CLONE THIS REPO VIA GIT (30min)
 git clone git@github.com:alexamanov/m2-compose.git
 
 ### OR DOWNLOAD ZIP
 ![ZIP](guide/zip.png?raw=true "ZIP")
 
-### OPEN PROJECT IN CONSOLE (CMD, POWERSHELL, BASH)
+### OPEN PROJECT IN GIT BASH
 cd m2-compose
 
-### BUILD AND RUN APP
+### BUILD AND RUN APP (30min)
 docker-compose up --build -d
 
-### IMPORT DATABASE
-docker exec -d mysql "mysql -u docker -pdocker m2 < /home/m2.sql"
+### IMPORT DATABASE (30min)
+Go to container mysql:
+<br>
+docker exec -it mysql bash
+<br>
+Import database:
+<br>
+mysql -u docker -pdocker m2 < /home/m2.sql
+![IMPORT](guide/import.png?raw=true "IMPORT")
 
 ### FRONT
 http://localhost/
