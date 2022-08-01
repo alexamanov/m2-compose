@@ -1,6 +1,7 @@
 ### REQUIREMENTS
 Docker https://docs.docker.com/desktop/install/windows-install/
 ![DOCKER](guide/docker.png?raw=true "DOCKER")
+![VM](guide/v.png?raw=true "VM")
 <br>
 Git https://git-scm.com/download/win
 ![GIT](guide/git.png?raw=true "GIT")
