@@ -56,7 +56,7 @@ services:
       - ./docker/php-fpm/php.ini:/usr/local/etc/php/php.ini
     working_dir: /var/www/html
     environment:
-      XDEBUG_CONFIG: "remote_host=host.docker.internal mode=debug start_with_request=yes idekey=PHPSTORM"
+      XDEBUG_CONFIG: "remote_host=192.168.220.1 mode=debug start_with_request=yes idekey=PHPSTORM"
       PHP_IDE_CONFIG: "serverName=PhpServerBase"
     networks:
       - inner
